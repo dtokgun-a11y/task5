@@ -65,4 +65,10 @@ function toInteger() {
   }
 
   document.getElementById("result").innerText = total;
+
+  gtag('event', 'convert_button_clicked', {
+    'conversion_type': 'to_integer',
+    'result': total,
+    'timestamp': new Date().toISOString()
+  });
 }
